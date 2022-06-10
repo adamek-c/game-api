@@ -1,7 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import AsideLinks from "./AsideLinks";
+import AsideContent from "./AsideContent";
 
 const Aside = ({ mobileOpen, drawerWidth, handleDrawerToggle }) => {
 	return (
@@ -11,7 +11,7 @@ const Aside = ({ mobileOpen, drawerWidth, handleDrawerToggle }) => {
 				width: { sm: drawerWidth },
 				flexShrink: { sm: 0 },
 			}}
-			aria-label="menu links"
+			aria-label="menu Content"
 		>
 			<Drawer
 				variant="temporary"
@@ -28,7 +28,7 @@ const Aside = ({ mobileOpen, drawerWidth, handleDrawerToggle }) => {
 					},
 				}}
 			>
-				<AsideLinks />
+				<AsideContent />
 			</Drawer>
 			<Drawer
 				variant="permanent"
@@ -41,7 +41,7 @@ const Aside = ({ mobileOpen, drawerWidth, handleDrawerToggle }) => {
 				}}
 				open
 			>
-				<AsideLinks />
+				<AsideContent />
 			</Drawer>
 		</Box>
 	);

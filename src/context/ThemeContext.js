@@ -31,6 +31,7 @@ const getDesignTokens = (mode) => ({
 					},
 					text: {
 						primary: "#9295a5",
+						secondary: "#fff",
 					},
 			  }),
 	},
