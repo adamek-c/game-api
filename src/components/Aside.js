@@ -4,6 +4,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import Toolbar from "@mui/material/Toolbar";
+import SearchInput from "./SearchInput";
 import Widgets from "./Widgets";
 
 const drawerWidth = 240;
@@ -18,14 +19,18 @@ const Aside = () => {
 	const drawer = (
 		<div>
 			<Toolbar />
-			<List></List>
+			<List>
+				<Box sx={{ display: { xs: "block", md: "none" }, textAlign: "center" }}>
+					<Widgets />
+				</Box>
+			</List>
 		</div>
 	);
 
 	return (
 		<Box sx={{ display: "flex" }}>
 			<CssBaseline />
-			<Widgets
+			<SearchInput
 				handleDrawerToggle={handleDrawerToggle}
 				drawerWidth={drawerWidth}
 			/>
