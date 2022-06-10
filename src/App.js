@@ -1,8 +1,9 @@
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import SharedLayout from "./pages/SharedLayout";
 import { Home, Error } from "./pages";
 
-function App() {
+const App = () => {
 	return (
 		<>
 			<Routes>
@@ -13,6 +14,6 @@ function App() {
 			</Routes>
 		</>
 	);
-}
+};
 
 export default App;

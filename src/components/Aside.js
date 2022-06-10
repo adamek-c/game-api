@@ -6,6 +6,7 @@ import List from "@mui/material/List";
 import Toolbar from "@mui/material/Toolbar";
 import SearchInput from "./SearchInput";
 import Widgets from "./Widgets";
+import { Typography } from "@mui/material";
 
 const drawerWidth = 240;
 

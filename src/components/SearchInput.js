@@ -16,6 +16,8 @@ const SearchInput = ({ handleDrawerToggle, drawerWidth }) => {
 					width: { sm: `calc(100% - ${drawerWidth}px)` },
 					ml: { sm: `${drawerWidth}px` },
 					p: 1.2,
+					bgcolor: "background.default",
+					color: "text.primary",
 				}}
 			>
 				<Toolbar>
@@ -40,7 +42,7 @@ const SearchInput = ({ handleDrawerToggle, drawerWidth }) => {
 							sx={{ flex: { sm: 1 } }}
 							id="standard-basic"
 							variant="standard"
-							defaultValue="Normal"
+							defaultValue="Search"
 							fullWidth
 						></TextField>
 						<Box

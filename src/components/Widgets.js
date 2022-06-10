@@ -6,13 +6,13 @@ import { IconButton } from "@mui/material";
 const Widgets = () => {
 	return (
 		<>
-			<IconButton>
+			<IconButton sx={{ color: "text.primary" }}>
 				<FavoriteBorderIcon />
 			</IconButton>
-			<IconButton sx={{ mx: "1rem" }}>
+			<IconButton sx={{ mx: "1rem", color: "text.primary" }}>
 				<GridViewIcon />
 			</IconButton>
-			<IconButton>
+			<IconButton sx={{ color: "text.primary" }}>
 				<ViewListIcon />
 			</IconButton>
 		</>
