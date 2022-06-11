@@ -7,7 +7,7 @@ const releasesLinks = [
 const topLinks = [
 	{ id: 3, name: "best of the year", icon: "military_tech" },
 	{ id: 4, name: "popular in 2021", icon: "insights" },
-	{ id: 5, name: "all time top 250", icon: "auto_awesome" },
+	{ id: 5, name: "all time top 20", icon: "auto_awesome" },
 ];
 
 const settingsLinks = [

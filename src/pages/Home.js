@@ -2,7 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from "@mui/material/Toolbar";
-import { Aside, SearchInput } from "../components";
+import { Aside, SearchInput, Films } from "../components";
 
 const drawerWidth = 240;
 
@@ -26,8 +26,17 @@ const Home = () => {
 					mobileOpen={mobileOpen}
 					handleDrawerToggle={handleDrawerToggle}
 				/>
-				<Toolbar />
-				<Toolbar />
+				<Box
+					component="main"
+					sx={{
+						flexGrow: 1,
+						p: 6,
+						width: { sm: `calc(100% - ${drawerWidth}px)` },
+					}}
+				>
+					<Toolbar />
+					<Films />
+				</Box>
 			</Box>
 		</>
 	);
