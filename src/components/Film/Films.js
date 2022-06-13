@@ -1,16 +1,21 @@
-import * as React from "react";
+import { Grid } from "@mui/material";
 import { useGlobalFilm } from "../../context/FilmsContext";
+
 import FilmSharedComponent from "./FilmSharedComponent";
 
 const Films = () => {
-	const { films, isLoading } = useGlobalFilm();
+	const { results: films } = useGlobalFilm();
 
 	return (
-		<>
-			{/* {films.map((film) => {
-				return <FilmSharedComponent {...film} key={film.id} />;
-			})} */}
-		</>
+		<Grid container spacing={2} columns={{ xs: 1, sm: 1, md: 12, xl: 12 }}>
+			{films.map((film) => {
+				return (
+					<Grid item xs={1} sm={2} md={6} xl={4} key={film.id}>
+						<FilmSharedComponent {...film} />;
+					</Grid>
+				);
+			})}
+		</Grid>
 	);
 };
 

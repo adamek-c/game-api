@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Suspense } from "react";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from "@mui/material/Toolbar";
@@ -35,7 +36,9 @@ const Home = () => {
 					}}
 				>
 					<Toolbar />
-					<Films />
+					<Suspense fallback={<h1>is Loading....</h1>}>
+						<Films />
+					</Suspense>
 				</Box>
 			</Box>
 		</>

@@ -17,12 +17,12 @@ const FilmSharedComponent = ({
 }) => {
 	return (
 		<CssVarsProvider>
-			<Card variant="outlined" sx={{ minWidth: "320px" }}>
+			<Card variant="outlined" sx={{ minWidth: "320px", my: 3 }}>
 				<Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>
 					<Typography level="h2" fontSize="md" sx={{ alignSelf: "flex-start" }}>
-						Yosemite National Park
+						{name}
 					</Typography>
-					<Typography level="body2">April 24 to May 02, 2021</Typography>
+					<Typography level="body2">{released}</Typography>
 				</Box>
 				<IconButton
 					aria-label="bookmark Bahamas Islands"
@@ -34,11 +34,8 @@ const FilmSharedComponent = ({
 					<BookmarkAdd />
 				</IconButton>
 
-				<AspectRatio minHeight="120px" maxHeight="200px" sx={{ my: 2 }}>
-					<img
-						src="https://images.unsplash.com/photo-1527549993586-dff825b37782?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270"
-						alt=""
-					/>
+				<AspectRatio ratio="4/3" sx={{ my: 2 }}>
+					<img src={img} alt={name} />
 				</AspectRatio>
 				<Box sx={{ display: "flex" }}>
 					<div>
