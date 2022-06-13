@@ -16,8 +16,6 @@ const SearchInput = ({ handleDrawerToggle, drawerWidth }) => {
 					width: { sm: `calc(100% - ${drawerWidth}px)` },
 					ml: { sm: `${drawerWidth}px` },
 					p: 1.2,
-					bgcolor: "background.default",
-					color: "text.primary",
 				}}
 			>
 				<Toolbar>

@@ -1,8 +1,8 @@
 import React from "react";
 import AspectRatio from "@mui/joy/AspectRatio";
 import Box from "@mui/joy/Box";
-import Button from "@mui/joy/Button";
 import Card from "@mui/joy/Card";
+import CardOverflow from "@mui/joy/CardOverflow";
 import IconButton from "@mui/joy/IconButton";
 import Typography from "@mui/joy/Typography";
 import BookmarkAdd from "@mui/icons-material/BookmarkAddOutlined";
@@ -14,10 +14,17 @@ const FilmSharedComponent = ({
 	background_image: img,
 	released,
 	rating,
+	ratings_count,
 }) => {
 	return (
 		<CssVarsProvider>
-			<Card variant="outlined" sx={{ minWidth: "320px", my: 3 }}>
+			<Card
+				variant="outlined"
+				sx={{
+					minWidth: "320px",
+					my: 3,
+				}}
+			>
 				<Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>
 					<Typography level="h2" fontSize="md" sx={{ alignSelf: "flex-start" }}>
 						{name}
@@ -37,22 +44,34 @@ const FilmSharedComponent = ({
 				<AspectRatio ratio="4/3" sx={{ my: 2 }}>
 					<img src={img} alt={name} />
 				</AspectRatio>
-				<Box sx={{ display: "flex" }}>
-					<div>
-						<Typography level="body3">Total price:</Typography>
-						<Typography fontSize="lg" fontWeight="lg">
-							$2900
-						</Typography>
-					</div>
-					<Button
-						variant="solid"
-						size="sm"
-						color="primary"
-						aria-label="Explore Bahamas Islands"
-						sx={{ ml: "auto", fontWeight: 600 }}
+				<Box>
+					<CardOverflow
+						variant="soft"
+						sx={{
+							display: "flex",
+							gap: 1.5,
+							py: 1.5,
+							px: "var(--Card-padding)",
+							borderTop: "1px solid",
+							borderRadius: 0,
+							borderColor: "neutral.outlinedBorder",
+							bgcolor: "background.level1",
+						}}
 					>
-						Explore
-					</Button>
+						<Typography
+							level="body3"
+							sx={{ fontWeight: "md", color: "text.secondary" }}
+						>
+							{rating} Rating
+						</Typography>
+						<Box sx={{ width: 2, bgcolor: "divider" }} />
+						<Typography
+							level="body3"
+							sx={{ fontWeight: "md", color: "text.secondary" }}
+						>
+							{ratings_count} Ratings Count
+						</Typography>
+					</CardOverflow>
 				</Box>
 			</Card>
 		</CssVarsProvider>

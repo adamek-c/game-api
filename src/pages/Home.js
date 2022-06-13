@@ -3,9 +3,12 @@ import { Suspense } from "react";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from "@mui/material/Toolbar";
-import { Aside, SearchInput, Films } from "../components";
+import { Aside, SearchInput } from "../components";
+import Skeleton from "@mui/material/Skeleton";
 
 const drawerWidth = 240;
+
+const Films = React.lazy(() => import("../components/Film/Films"));
 
 const Home = () => {
 	const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -36,7 +39,7 @@ const Home = () => {
 					}}
 				>
 					<Toolbar />
-					<Suspense fallback={<h1>is Loading....</h1>}>
+					<Suspense fallback={<h1>Loading....</h1>}>
 						<Films />
 					</Suspense>
 				</Box>

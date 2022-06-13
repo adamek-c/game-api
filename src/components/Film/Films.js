@@ -7,11 +7,16 @@ const Films = () => {
 	const { results: films } = useGlobalFilm();
 
 	return (
-		<Grid container spacing={2} columns={{ xs: 1, sm: 1, md: 12, xl: 12 }}>
+		<Grid
+			container
+			spacing={2}
+			columns={{ xs: 1, sm: 1, md: 12, xl: 12 }}
+			sx={{ bgcolor: "background.default" }}
+		>
 			{films.map((film) => {
 				return (
 					<Grid item xs={1} sm={2} md={6} xl={4} key={film.id}>
-						<FilmSharedComponent {...film} />;
+						<FilmSharedComponent {...film} />
 					</Grid>
 				);
 			})}
