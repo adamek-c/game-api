@@ -7,6 +7,9 @@ import IconButton from "@mui/joy/IconButton";
 import Typography from "@mui/joy/Typography";
 import BookmarkAdd from "@mui/icons-material/BookmarkAddOutlined";
 import { CssVarsProvider } from "@mui/joy/styles";
+import Button from "@mui/joy/Button";
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import { useGlobalFilm } from "../../context/FilmsContext";
 
 const FilmSharedComponent = ({
 	id,
@@ -15,7 +18,14 @@ const FilmSharedComponent = ({
 	released,
 	rating,
 	ratings_count,
+	setOpen,
 }) => {
+	const { setIdFilm } = useGlobalFilm();
+	const handleOpen = () => {
+		setOpen(true);
+		setIdFilm(id);
+	};
+
 	return (
 		<CssVarsProvider>
 			<Card
@@ -72,6 +82,14 @@ const FilmSharedComponent = ({
 							{ratings_count} Ratings Count
 						</Typography>
 					</CardOverflow>
+					<Button
+						variant="soft"
+						color="neutral"
+						endIcon={<KeyboardArrowRight />}
+						onClick={handleOpen}
+					>
+						Watch Trailer
+					</Button>
 				</Box>
 			</Card>
 		</CssVarsProvider>
