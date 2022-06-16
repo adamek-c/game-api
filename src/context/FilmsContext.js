@@ -10,6 +10,7 @@ const Film = ({ children }) => {
 	const [idFilm, setIdFilm] = useState();
 	const [trailer, setTrailer] = useState();
 
+	// trailer
 	const urlTrailers = `https://api.rawg.io/api/games/${idFilm}/movies?key=e6af0c8a3c84418ea71a4d1099116c77`;
 
 	// get all films
