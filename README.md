@@ -1,6 +1,6 @@
 # Game Api
 
-A simple project that displays games. Material UI was used in the projection
+The project involved the use of ready-made components using the MUI library. A project that, displays the most popular games that are just playable
 
 # live demo
 
